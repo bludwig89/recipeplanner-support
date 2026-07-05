@@ -101,13 +101,14 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .email-btn {
-      display: inline-block;
+      display: block;
+      width: max-content;
+      margin: 6px auto 0;
       background: var(--accent);
       color: #fff;
       padding: 12px 22px;
       border-radius: 10px;
       font-weight: 600;
-      margin-top: 6px;
     }
     .email-btn:hover { text-decoration: none; opacity: 0.92; }
     details {
@@ -137,14 +138,15 @@
     details p { margin: 10px 0 6px; color: var(--ink); }
     .privacy-hero { background: var(--accent-soft); border-color: transparent; }
     .badge {
-      display: inline-block;
+      display: block;
+      width: max-content;
+      margin: 0 auto 12px;
       font-size: 13px;
       font-weight: 600;
       color: var(--accent);
       background: var(--accent-soft);
       padding: 4px 10px;
       border-radius: 999px;
-      margin-bottom: 12px;
     }
     footer {
       text-align: center;
@@ -233,13 +235,13 @@
       </div>
 
       <div class="card">
-        <h2>What we can and can't see</h2>
+        <h2>What We Can and Can't See</h2>
         <p>Recipe Planner has no developer-run server. The app talks directly from your device to your own iCloud account, so as the developer I <strong>cannot read, download, or decrypt</strong> your content.</p>
         <p>Specifically, I have <strong>no access</strong> to your recipe text or photos, meal plans, grocery lists, tags, who is in your household, or your iCloud identity. The only things visible to me are the database <em>schema</em> (record types and field names — never their contents) and high-level, aggregate operational metrics such as request volume and error rates. None of that includes your data.</p>
       </div>
 
       <div class="card">
-        <h2>How your data is stored</h2>
+        <h2>How Your Data Is Stored</h2>
         <p>Everything syncs through Apple's CloudKit in your personal iCloud account:</p>
         <ul>
           <li>Your own recipes, meal plans, and grocery list live in your <strong>private</strong> iCloud database.</li>
@@ -250,13 +252,13 @@
       </div>
 
       <div class="card">
-        <h2>No tracking, no analytics</h2>
+        <h2>No Tracking, No Analytics</h2>
         <p>Recipe Planner does not track you across other apps or websites and includes no advertising or third-party tracking SDKs. It does not collect analytics about how you use the app. Your recipe content is never mined for recommendations, advertising, or model training.</p>
         <p>The app uses a small number of standard Apple system APIs only for their intended purpose — for example, saving your local settings and checking when local files were last updated. These stay on your device.</p>
       </div>
 
       <div class="card">
-        <h2>Data recovery</h2>
+        <h2>Data Recovery</h2>
         <p>Because your data lives in your own iCloud account rather than on a developer server, recovery is handled through your iCloud and device backups. I'm unable to look up an account or restore recipes from my side — but nothing is lost as long as your iCloud is intact.</p>
       </div>
 
