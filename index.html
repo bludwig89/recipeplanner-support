@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Planner — Support</title>
+  <meta name="description" content="Support, FAQ, and privacy information for the Recipe Planner iPhone and iPad app.">
+  <style>
+    :root {
+      --accent: #D4600A;
+      --accent-soft: rgba(212, 96, 10, 0.08);
+      --ink: #1c1c1e;
+      --muted: #6b6b70;
+      --line: rgba(0, 0, 0, 0.08);
+      --card: #ffffff;
+      --bg: #faf7f5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f2f2f5;
+        --muted: #a1a1a8;
+        --line: rgba(255, 255, 255, 0.12);
+        --card: #1c1c1e;
+        --bg: #121212;
+        --accent-soft: rgba(212, 96, 10, 0.16);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px 80px; }
+    header {
+      text-align: center;
+      padding: 60px 22px 24px;
+    }
+    .logo {
+      width: 88px; height: 88px;
+      border-radius: 20px;
+      overflow: hidden;
+      display: inline-block;
+      box-shadow: 0 6px 18px rgba(13, 43, 92, 0.35);
+      margin-bottom: 18px;
+    }
+    .logo img { width: 100%; height: 100%; display: block; }
+    h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.5px; }
+    .tagline { color: var(--muted); font-size: 17px; margin: 0; }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin: 8px auto 26px;
+      max-width: 720px;
+      padding: 5px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      width: max-content;
+    }
+    .tab {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 9px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .tab:hover { color: var(--ink); }
+    .tab.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin: 18px 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.3px; }
+    h3 { font-size: 16px; margin: 22px 0 4px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .email-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .email-btn:hover { text-decoration: none; opacity: 0.92; }
+    details {
+      border-top: 1px solid var(--line);
+      padding: 14px 0 4px;
+    }
+    details:first-of-type { border-top: none; }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      color: var(--accent);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    details[open] summary::after { content: "\2013"; }
+    details p { margin: 10px 0 6px; color: var(--ink); }
+    .privacy-hero { background: var(--accent-soft); border-color: transparent; }
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="AppIcon.svg" alt="Recipe Planner app icon"></div>
+    <h1>Recipe Planner</h1>
+    <p class="tagline">Your recipe library and weekly meal planner, all in one place.</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="support">Support</button>
+    <button class="tab" data-tab="privacy">Privacy</button>
+  </div>
+
+  <div class="wrap">
+
+    <!-- ============ SUPPORT PANEL ============ -->
+    <div class="panel active" id="support">
+
+      <div class="card">
+        <h2>About</h2>
+        <p>Recipe Planner makes it easy to save recipes, plan your week, and build your grocery list — without ads, subscriptions, or clutter. Import recipes from any website with a tap, scan a handwritten card with your camera, or type one in yourself. Then drag them into your weekly meal plan and let the grocery list write itself.</p>
+      </div>
+
+      <div class="card">
+        <h2>Contact Support</h2>
+        <p>Have a question, found a bug, or want to suggest a feature? Email me directly — I read every message and usually reply within a couple of days.</p>
+        <a class="email-btn" href="mailto:benludwig6382@gmail.com?subject=Recipe%20Planner%20Support">Email Support</a>
+        <p style="margin-top:14px; color:var(--muted); font-size:14px;">benludwig6382@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>How do I restore my Pro purchase?</summary>
+          <p>Open the app, go to <strong>Settings</strong>, and tap <strong>Restore Purchases</strong>. Make sure you're signed in with the same Apple ID you used to buy Recipe Planner Pro. Recipe Planner Pro is a one-time purchase — no subscription — so once restored it's yours on any device signed into that Apple ID.</p>
+        </details>
+
+        <details>
+          <summary>How do I import a recipe from a website?</summary>
+          <p>Tap the <strong>+</strong> button to add a recipe, choose <strong>Import from Web</strong>, and paste or share the recipe's URL. Recipe Planner reads the page and fills in the ingredients, steps, and photo automatically. It works with AllRecipes, NYT Cooking, Serious Eats, Food Network, Bon Appétit, and thousands of other cooking sites. You can also use the iOS <strong>Share sheet</strong> from Safari and pick Recipe Planner.</p>
+        </details>
+
+        <details>
+          <summary>Can I scan a recipe card or cookbook page?</summary>
+          <p>Yes. When adding a recipe, choose <strong>Scan with Camera</strong> and take a photo of the card or page. Recipe Planner reads the text for you so you can save handwritten and printed recipes without retyping them.</p>
+        </details>
+
+        <details>
+          <summary>How does the serving multiplier work?</summary>
+          <p>Open any recipe and adjust the serving count. Every ingredient scales automatically, including fractions and mixed numbers, so you don't have to do the math when cooking for one or feeding a crowd.</p>
+        </details>
+
+        <details>
+          <summary>How do I sync across my iPhone and iPad?</summary>
+          <p>With Recipe Planner Pro, your library, meal plans, and grocery list sync through your personal iCloud account. Just sign in to iCloud on each device with the same Apple ID and make sure iCloud is enabled. Your data stays up to date automatically.</p>
+        </details>
+
+        <details>
+          <summary>Can I share my recipes with family or roommates?</summary>
+          <p>Yes — Recipe Planner Pro lets you share your entire library, meal plans, and grocery list across <strong>different</strong> iCloud accounts. Sharing is invite-only: only people you explicitly invite can join your household.</p>
+        </details>
+
+        <details>
+          <summary>Can I import from another recipe app?</summary>
+          <p>Recipe Planner can import from <strong>RecipeSage</strong> and <strong>Recipe Keeper</strong> if you're switching apps. Export your recipes from the other app, then import the file in Recipe Planner.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- ============ PRIVACY PANEL ============ -->
+    <div class="panel" id="privacy">
+
+      <div class="card privacy-hero">
+        <span class="badge">Privacy Policy</span>
+        <p>Recipe Planner stores your recipes, meal plans, and grocery list in your personal iCloud account using Apple's CloudKit service. This data is <strong>not</strong> collected, accessed, or shared by the developer. The app contains no advertising and no third-party tracking, and it collects no analytics.</p>
+        <p style="margin-bottom:0; color:var(--muted); font-size:14px;">Last updated: July 5, 2026</p>
+      </div>
+
+      <div class="card">
+        <h2>What we can and can't see</h2>
+        <p>Recipe Planner has no developer-run server. The app talks directly from your device to your own iCloud account, so as the developer I <strong>cannot read, download, or decrypt</strong> your content.</p>
+        <p>Specifically, I have <strong>no access</strong> to your recipe text or photos, meal plans, grocery lists, tags, who is in your household, or your iCloud identity. The only things visible to me are the database <em>schema</em> (record types and field names — never their contents) and high-level, aggregate operational metrics such as request volume and error rates. None of that includes your data.</p>
+      </div>
+
+      <div class="card">
+        <h2>How your data is stored</h2>
+        <p>Everything syncs through Apple's CloudKit in your personal iCloud account:</p>
+        <ul>
+          <li>Your own recipes, meal plans, and grocery list live in your <strong>private</strong> iCloud database.</li>
+          <li>When you share a household, that content lives in a <strong>shared</strong> zone visible only to the people you invite. Sharing is invite-only — nothing is ever public.</li>
+          <li>Apple encrypts this data in transit and at rest. If you enable Apple's <strong>Advanced Data Protection</strong>, it becomes end-to-end encrypted so not even Apple can read it.</li>
+        </ul>
+        <p>Your app settings — like accent color and preferences — are stored only on your own device and are never synced or shared.</p>
+      </div>
+
+      <div class="card">
+        <h2>No tracking, no analytics</h2>
+        <p>Recipe Planner does not track you across other apps or websites and includes no advertising or third-party tracking SDKs. It does not collect analytics about how you use the app. Your recipe content is never mined for recommendations, advertising, or model training.</p>
+        <p>The app uses a small number of standard Apple system APIs only for their intended purpose — for example, saving your local settings and checking when local files were last updated. These stay on your device.</p>
+      </div>
+
+      <div class="card">
+        <h2>Data recovery</h2>
+        <p>Because your data lives in your own iCloud account rather than on a developer server, recovery is handled through your iCloud and device backups. I'm unable to look up an account or restore recipes from my side — but nothing is lost as long as your iCloud is intact.</p>
+      </div>
+
+      <div class="card">
+        <h2>Questions</h2>
+        <p>If you have any questions about how your data is handled, email <a href="mailto:benludwig6382@gmail.com?subject=Recipe%20Planner%20Privacy">benludwig6382@gmail.com</a>.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Recipe Planner for iPhone &amp; iPad · <a href="mailto:benludwig6382@gmail.com">benludwig6382@gmail.com</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-tab');
+        document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+        document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (history.replaceState) history.replaceState(null, '', '#' + target);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+    // Deep-link support: #privacy opens the privacy tab
+    if (location.hash === '#privacy') {
+      document.querySelector('.tab[data-tab="privacy"]').click();
+    }
+  </script>
+</body>
+</html>

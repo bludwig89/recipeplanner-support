@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Dark blue background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D2B5C"/>
+      <stop offset="100%" stop-color="#071A3E"/>
+    </linearGradient>
+    <!-- Subtle top highlight -->
+    <radialGradient id="highlight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <!-- Orange icon color -->
+    <!-- #D4600A primary orange, #D4600A lighter -->
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="0" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="0" fill="url(#highlight)"/>
+
+  <!-- ═══════════════════════════════
+       STEAM WISPS (3 curvy lines above pie)
+       Centered at x=512, starting ~y=240
+       SF Symbols style: bold, rounded caps, smooth curves
+       ═══════════════════════════════ -->
+  <g fill="none" stroke="#D4600A" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Left steam wisp (same S-curve shape, offset left) -->
+    <path d="
+      M 392 342
+      C 392 302  422 282  422 247
+      C 422 212  392 192  392 152
+      C 392 117  422  97  422  62
+    "/>
+
+    <!-- Center steam wisp (same S-curve shape, centered) -->
+    <path d="
+      M 512 342
+      C 512 302  542 282  542 247
+      C 542 212  512 192  512 152
+      C 512 117  542  97  542  62
+    "/>
+
+    <!-- Right steam wisp (same S-curve shape, offset right) -->
+    <path d="
+      M 632 342
+      C 632 302  662 282  662 247
+      C 662 212  632 192  632 152
+      C 632 117  662  97  662  62
+    "/>
+
+  </g>
+
+  <!-- ═══════════════════════════════
+       PIE DISH BODY
+       Filled pie in a round dish
+       ═══════════════════════════════ -->
+
+  <!-- Pie dish (elliptical base / lip) -->
+  <ellipse cx="512" cy="780" rx="310" ry="38" fill="#904E08" opacity="0.85"/>
+
+  <!-- Pie dish side wall -->
+  <rect x="202" y="740" width="620" height="42" rx="0" fill="#C25D0C"/>
+
+  <!-- Pie filling — the main body of the pie -->
+  <!-- Pie is a wide rounded-top shape -->
+  <path d="
+    M 202 742
+    L 202 680
+    Q 202 460  512 460
+    Q 822 460  822 680
+    L 822 742
+    Z
+  " fill="#D4600A"/>
+
+  <!-- Crust top edge — slightly lighter band across the top of the pie -->
+  <path d="
+    M 210 678
+    Q 210 468  512 468
+    Q 814 468  814 678
+    L 814 690
+    Q 814 480  512 480
+    Q 210 480  210 690
+    Z
+  " fill="#D4600A" opacity="0.55"/>
+
+  <!-- Crimped crust edge at top — a thick arc ring along the top rim -->
+  <path d="
+    M 202 682
+    Q 200 455  512 455
+    Q 824 455  822 682
+    Q 822 458  512 472
+    Q 202 458  202 682
+    Z
+  " fill="none" stroke="#C96010" stroke-width="22" opacity="0.55"/>
+
+  <!-- Pie top surface detail — subtle center slit / vent lines -->
+  <g fill="none" stroke="#904E08" stroke-width="12" stroke-linecap="round" opacity="0.5">
+    <line x1="472" y1="580" x2="552" y2="580"/>
+    <line x1="512" y1="555" x2="512" y2="605"/>
+  </g>
+
+  <!-- Pie crust bump at the very top center (decorative dome) -->
+  <ellipse cx="512" cy="467" rx="95" ry="25" fill="#C96010" opacity="0.75"/>
+
+  <!-- Pie dish rim highlight -->
+  <rect x="202" y="740" width="620" height="12" rx="0" fill="#C96010" opacity="0.35"/>
+
+  <!-- Dish bottom rounded edge -->
+  <path d="M 202 742 Q 202 820 512 820 Q 822 820 822 742 L 822 780 Q 822 840 512 840 Q 202 840 202 780 Z" fill="#904E08" opacity="0.6"/>
+
+</svg>
