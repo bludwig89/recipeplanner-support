@@ -180,8 +180,8 @@
       <div class="card">
         <h2>Contact Support</h2>
         <p>Have a question, found a bug, or want to suggest a feature? Email me directly — I read every message and usually reply within a couple of days.</p>
-        <a class="email-btn" href="mailto:benludwig6382@gmail.com?subject=Recipe%20Planner%20Support">Email Support</a>
-        <p style="margin-top:14px; color:var(--muted); font-size:14px;">benludwig6382@gmail.com</p>
+        <a class="email-btn email-link" data-subject="Recipe Planner Support" href="#">Email Support</a>
+        <p style="margin-top:14px; color:var(--muted); font-size:14px;"><span class="email-text"></span></p>
       </div>
 
       <div class="card">
@@ -263,17 +263,36 @@
 
       <div class="card">
         <h2>Questions</h2>
-        <p>If you have any questions about how your data is handled, email <a href="mailto:benludwig6382@gmail.com?subject=Recipe%20Planner%20Privacy">benludwig6382@gmail.com</a>.</p>
+        <p>If you have any questions about how your data is handled, email <a class="email-link email-text" data-subject="Recipe Planner Privacy" href="#"></a>.</p>
       </div>
     </div>
 
     <footer>
-      <p>Recipe Planner for iPhone &amp; iPad · <a href="mailto:benludwig6382@gmail.com">benludwig6382@gmail.com</a></p>
+      <p>Recipe Planner for iPhone &amp; iPad · <a class="email-link email-text" href="#"></a></p>
     </footer>
 
   </div>
 
   <script>
+    // --- Email obfuscation -------------------------------------------------
+    // The address never appears in the page source. It's assembled from parts
+    // at runtime, so scrapers that read raw HTML can't harvest it, while real
+    // visitors get a normal clickable link.
+    (function () {
+      var user = ['ben', 'ludwig', '6382'].join('');
+      var domain = ['gmail', 'com'].join('.');
+      var addr = user + String.fromCharCode(64) + domain; // 64 = "@"
+      document.querySelectorAll('.email-text').forEach(function (el) {
+        el.textContent = addr;
+      });
+      document.querySelectorAll('.email-link').forEach(function (el) {
+        var subject = el.getAttribute('data-subject');
+        var href = 'mailto:' + addr;
+        if (subject) href += '?subject=' + encodeURIComponent(subject);
+        el.setAttribute('href', href);
+      });
+    })();
+
     document.querySelectorAll('.tab').forEach(function (tab) {
       tab.addEventListener('click', function () {
         var target = tab.getAttribute('data-tab');
